@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LogIn/SignUp</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="container">
+    <div class="form-box" >
+      <h1 id="title">Sign Up</h1>
+      <form id="authForm" onsubmit="return false;">
+      <div class="input-group">
+        <div class="input-field" id="nameField">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" placeholder="Name" id="name">
+          <div  id="nameError" class="error-message"></div>
+
+        </div>
+
+        <div class="input-field" >
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" placeholder="Email" id="email">
+          <div id="emailError" class="error-message"></div>
+
+        </div> 
+        
+        <div class="input-field" id="phoneField">
+          <i class="fa-solid fa-phone"></i>
+          <input type="tel" placeholder="Phone Number" id="phone">
+          <div id="phoneError" class="error-message"></div>
+
+        </div>
+        
+        <div class="input-field">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" placeholder="Password" id="password">
+          <div id="passwordError" class="error-message"></div>
+
+        </div>
+       
+      </div>
+      <p>Forget Password <a href="#">CLick Here!</a></p>
+      <div class="btn-field">
+        <button type="button" class="disable" id="signinBtn">Sign in</button>
+        <button type="button" id="signupBtn">Sign up</button>
+      </div>
+  </form>
+  <script src="{{ url_for('static', filename='Javascript.js') }}"></script>
+      
+    </div>
+    
+  </div>
+</body>
+</html>
